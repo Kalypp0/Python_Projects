@@ -1,0 +1,25 @@
+Simple Snake, water, gun game.
+First Try at it 
+import random
+def game():
+    list1=["snake","water","gun"]
+    computer = random.choice(list1)
+    player =input("Snake,Water,Gun: ").lower()
+    if player not in list1:
+        print("Invalid input: ",end="")
+        return
+    elif computer == player:
+        print(f"I chose {computer} too, so we Tied",end="")
+    elif computer == "snake" and player == "water":
+        print(f"I chose {computer}, You Win!",end="")
+    elif computer == "water" and player == "gun":
+        print(f"I chose {computer}, You Lose!",end="")
+    elif computer == "snake" and player == "gun":
+        print(f"I chose {computer}, You Win!",end="")
+    elif player == "snake" and computer == "water":
+        print(f"I chose {computer}, You Lose!", end="")
+    elif player == "water" and computer == "gun":
+        print(f"I chose {computer}, You Win!", end="")
+    elif player == "snake" and computer == "gun":
+        print(f"I chose {computer}, You Lose!", end="")
+game()
