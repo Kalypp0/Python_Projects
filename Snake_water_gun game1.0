@@ -1,0 +1,18 @@
+A revised Vesrion of the Snake, water, gun game
+import random
+def game():
+    list1=["snake","water","gun"]
+    computer = random.choice(list1)
+    player =input("Snake,Water,Gun: ").lower()
+    if player not in list1:
+        print("Invalid input: ",end="")
+        return
+    elif computer == player:
+        print(f"I chose {computer} too, so we Tied",end="")
+    elif computer == "water" and player == "gun" or\
+        computer == "gun" and player == "snake" or\
+        computer == "water" and player == "snake":
+        print(f"I chose {computer}, You lose!",end="")
+    else:
+        print(f"I chose {computer}, You win!",end="")
+game()
