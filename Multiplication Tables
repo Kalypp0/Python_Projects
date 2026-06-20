@@ -1,0 +1,11 @@
+import os
+def multiplication_table():
+    os.makedirs("Times_table",exist_ok=True)
+    for i in range(2,21):
+        with open(f"Times_table/{i}table.txt","w") as f:
+            for j in range(1,13):
+                line =f"{i} x {j} = {i*j}\n"
+                f.write(line)
+        print(f"{i} x {j}={i*j}")
+
+multiplication_table()
