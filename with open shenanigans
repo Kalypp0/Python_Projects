@@ -1,0 +1,17 @@
+f=open("hiscore.txt","r")
+old_score=f.read()
+if old_score == "":
+    old_score = 0
+
+
+def game():
+    new_score= int(input("What his new score: "))
+    if new_score > int(old_score):
+        with open("hiscore.txt","w") as r:
+            r.write(str(new_score))
+            print(f"New score entered: {new_score}")
+    else:
+        print(f"YOU'VE BON")
+
+
+game()
