@@ -1,0 +1,11 @@
+def rep():
+    list=['donkey','mad','crazy','stupid','monkey']
+
+    with open("donkey.txt","r")as f:
+        content= f.read().lower()
+        for word in list:
+            content= content.replace(word,"######")
+    with open("donkey.txt","w") as j:
+        j.write(content)
+    print("done")
+rep()
