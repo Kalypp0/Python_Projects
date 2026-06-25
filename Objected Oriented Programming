@@ -1,0 +1,18 @@
+class Programmer:
+    company = "ComSys"
+    def __init__(self,name,age,department):
+        self.name = name
+        self.age = age
+        self.department = department
+
+    def pledge(self):
+        print(f"I'm {self.name},{self.age} years old, happy to work with yall\n"
+              f"I work in {self.department} Department\n"
+              f"I pledge to commit my self to {self.company} as long as i work here")
+
+    @staticmethod
+    def salue():
+        print("We are happy you chose to work with us")
+someone= Programmer("Someone", 32,"Cybersecurity" )
+someone.pledge()
+someone.salue()
